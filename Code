@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Basic Game</title>
+		
+		<style>
+			body {
+				background-color: #aaaaaa;
+				font-family: 'haettenschweiler';
+				font-size: 28px;
+				padding: 0px 0px 0px 10px;
+				margin: 0px 0px 0px 0px;
+			}
+
+			.GameViewPort {
+				position: absolute;
+				left: 10px;
+				top: absolute;
+				border: 1px solid #000000;
+				background-color: #000000;
+			}
+		</style>
+	</head>
+	
+	<body onload="startGame()">
+		<h1>BASIC GAME - PROJECT 001</h1>
+		<p id="demo">
+			<button onClick="window.location.reload()">New Game</button>
+		</p>
+		<canvas id="mybasicgame" class="GameViewPort" width="750" height="500">
+		</canvas>
+		<script>
+			var canvas = document.getElementById("mybasicgame");
+    			var ctx = canvas.getContext("2d");
+
+			var canvasPos = getPosition(canvas);
+			var mouseX = 0;
+			var mouseY = 0;
+
+			var targetX = 10, targetY = 10;
+			var x = 0, y = 0;
+			var velX = 0, velY = 0;
+			var speed = 7;
+ 
+			canvas.addEventListener("mousemove", setMousePosition, false);
+ 
+			function setMousePosition(e) {
+				mouseX = e.clientX - canvasPos.x;
+				mouseY = e.clientY - canvasPos.y;
+
+			}
+
+			function update() {
+				
+				//Player's square
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				ctx.beginPath();
+				ctx.fillStyle = "#00FF00";
+				ctx.fillRect(mouseX, mouseY, 25, 25);                              
+				ctx.fill();
+
+				//Enemy's sqaure
+				var tx = targetX - x, ty = targetY - y;
+				var dist = Math.sqrt(tx*tx+ty*ty);
+				var rad = Math.atan2(ty,tx), angle = rad/Math.PI * 180;
+				var velX = (tx/dist)*speed, velY = (ty/dist)*speed;
+					x += velX
+					y += velY
+				ctx.beginPath();
+				ctx.fillStyle = "#FF0000";
+				ctx.fillRect(x, y, 25, 25);
+				ctx.fill();
+			
+				requestAnimationFrame(update);
+			}
+			
+			update();
+
+			//Only fixes a bit of the scrolling issue
+			window.addEventListener("scroll", updatePosition, false);
+			window.addEventListener("resize", updatePosition, false);
+	
+			function updatePosition() {
+				canvasPosition = getPosition(canvas);
+			}
+			
+			//gets the mouse position relative to the shape
+			function getPosition(el) {
+				var xPos = 12.5;
+				var yPos = 12.5;
+				
+				//This part of the command has the mouse positioned off for some reason, could be linked to the scrolling 
+				 while (el) {
+					if (el.tagName == "BODY") {
+						// deal with browser quirks with body/window/document and page scroll
+						var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+						var yScroll = el.scrollTop || document.documentElement.scrollTop;
+
+						xPos += (el.offsetLeft - xScroll + el.clientLeft);
+						yPos += (el.offsetTop - yScroll + el.clientTop);
+
+					} else {
+						// for all other non-BODY elements
+						xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+						yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+					}
+					
+					el = el.offsetParent;
+					}
+					
+					return {
+						x: xPos,
+						y: yPos
+					};
+				} 
+			
+			canvas.addEventListener("mousemove", function(e){
+				targetX = e.pageX;
+				targetY = e.pageY;
+			});
+
+		</script>
+	</body>
+</html>
