@@ -13,3 +13,6 @@ It's 1 on 1 in this simple yet intense battle! The aim of the game is to lead yo
 * https://www.kirupa.com/canvas/follow_mouse_cursor.htm
 * http://www.java2s.com/Tutorials/Javascript/Canvas_How_to/Animation/Chase_the_mouse.htm
 * https://www.w3schools.com/graphics/game_intro.asp
+
+### Flowchart
+![Flowchart](https://github.com/LBruni98/Project-001/blob/master/Flow%20Chart.png)
