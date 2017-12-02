@@ -1,4 +1,11 @@
 # Trace Ball
+Project 001
+
+## Table of Contents
+1. Introduction
+2. Development
+3. Creation and Implementation
+4. Research
 
 ## Introduction
 This design document showcases the design, development and implementation of "Trace Ball", along with the features and mechanics within the game.
@@ -37,17 +44,23 @@ A non-playing character NPC (that is a character controlled by the computer) tar
 | 5          | Create level boundaries                     | 2      | 22/09    |
 | 6          | Have enemy follow the mouse                 | 3      | 22/09    |
 | 7          | Create life counter                         | 2      | 22/09    |
-| 8          | Create "You win"/Game over screen           | 2      | 22/09    |
+| 8          | Create Win/Game over screen                 | 2      | 22/09    |
 
 #### Flowchart
 ![Flowchart](https://github.com/LBruni98/Project-001/blob/master/Flow%20Chart.png)
 
+Here is the main layout for what I'm trying to do. The flowchart shows the overall creation of the game; the creation of the UI and game characters,
 ## Creation and Implementation
 
 #### IDE
-![Notepad]()
+![Notepad](https://github.com/LBruni98/Trace-Ball/blob/master/Notepad.PNG)
 
 The IDE used for this was notepad as a challenge. Notepad is basic, very standard and wouldn't really be considered a proper IDE as there is no error correcting and no syntax. Notepad can be used to create html or JavaScript pages by changing the type of file rather than leaving it at a text file and because of the file types supported, the code can be altered in other IDEs such as Dreamweaver.
+
+#### Debugging
+The only way to verify either or not there is an error is if the JavaScript code refuses to run. There is no way of notepad knowing where the error could be located in the code. However, using the console to find where the errors are located are far more useful. The process of debugging where needed, was to run the program when a specific function would be entered, using the console to find out where the located error is and either alter or comment out the code where the problems were occurring.
+
+## Research
 
 #### References for creation
 * https://www.kirupa.com/canvas/follow_mouse_cursor.htm
