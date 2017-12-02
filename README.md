@@ -45,7 +45,9 @@ A non-playing character NPC (that is a character controlled by the computer) tar
 ## Creation and Implementation
 
 #### IDE
+![Notepad]()
 
+The IDE used for this was notepad as a challenge. Notepad is basic, very standard and wouldn't really be considered a proper IDE as there is no error correcting and no syntax. Notepad can be used to create html or JavaScript pages by changing the type of file rather than leaving it at a text file and because of the file types supported, the code can be altered in other IDEs such as Dreamweaver.
 
 #### References for creation
 * https://www.kirupa.com/canvas/follow_mouse_cursor.htm
