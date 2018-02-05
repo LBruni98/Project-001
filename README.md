@@ -135,6 +135,6 @@ The game in action, displaying the shapes in combat. The green square being the 
 ## Research
 
 #### References for creation
-* https://www.kirupa.com/canvas/follow_mouse_cursor.htm
-* http://www.java2s.com/Tutorials/Javascript/Canvas_How_to/Animation/Chase_the_mouse.htm
-* https://www.w3schools.com/graphics/game_intro.asp
+* Kirupa (2015). Follow the Mouse Cursor. [online]. Kirupa. Available from: <https://www.kirupa.com/canvas/follow_mouse_cursor.htm>. [Accessed 24 September 2017].
+* java2s.com [online]. (n.d.). Available from: <http://www.java2s.com/Tutorials/Javascript/Canvas_How_to/Animation/Chase_the_mouse.htm>. [Accessed September 2017].
+* w3schools.com [online]. (n.d.). Available from: <https://www.w3schools.com/graphics/game_intro.asp>. [Accessed September 2017].
